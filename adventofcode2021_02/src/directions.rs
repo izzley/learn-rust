@@ -1,5 +1,3 @@
-use log::info;
-
 #[derive(PartialEq, Debug)]
 pub struct Coordinate {
     pub x: i64,

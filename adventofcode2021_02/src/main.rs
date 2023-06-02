@@ -21,5 +21,8 @@ fn main() {
     // Part Two
     let direction_step = load_directions_txt_to_vec_tuple(part_two_input).unwrap();
     let position = dive_instructions_aim(&direction_step);
-    info!("Horizontal * Depth (with aim adjustment)= {}", position.x * position.y)
+    info!(
+        "Horizontal * Depth (with aim adjustment)= {}",
+        position.x * position.y
+    )
 }
