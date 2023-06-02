@@ -16,7 +16,12 @@ fn main() {
 
     // Part Two
     let number_vec = load_number_txt_to_vector(&filename_args[2]).unwrap();
-    // Chunks
-    let chunks = number_vec.chunks(3).collect::<Vec<_>>();
-    println!("{:?}", chunks);
+    // Chunks of 3
+    let sum_windows = sum_three_window_to_vec(&number_vec);
+    println!("{:?}", sum_windows);
+    // Check pairs of values increasing
+    let is_bigger_vec = next_is_bigger(&sum_windows);
+    // Only count increasing
+    let count_increases = count_true_values(&is_bigger_vec);
+    println!("{:?}", count_increases);
 }

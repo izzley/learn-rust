@@ -11,7 +11,5 @@ pub fn count_true_values(_vec: &[bool]) -> i32 {
 }
 
 pub fn sum_three_window_to_vec(_vec: &[i32]) -> Vec<i32> {
-    unimplemented!()
-    // Find length of list
-    // Return indexes in chunks of 3
+    return _vec.windows(3).map(|w| w.iter().sum()).collect::<Vec<_>>();
 }
